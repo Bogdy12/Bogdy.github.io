@@ -17,14 +17,12 @@
 
     
 <meta charset='utf-8' />
-<title>Display a map</title>
+<title>Manchester-Accessible-Strategy</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
-<!--The following scripts are needed to plot the plotly graph-->
-<script src="https://cdn.plot.ly/plotly-1.32.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+
 
 <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.10.2.min.js?ver=1.10.2'></script> 
@@ -32,7 +30,7 @@
 
 <style>
 #map { position:absolute; top:0; bottom:0; width:100%; }
-  </style>
+</style>
 
 </head>
 
@@ -44,29 +42,24 @@
   padding: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
 }
-
 /* Navigator bar css code ///////////////////////////////////////////////// */
 h1 {
   font-size:40px;
   line-height: 30px;
   margin: 0%
 }
-
 h2 {
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 10px;
 }
-
 a {
   text-decoration: none;
   color: rgb(34, 54, 145);
 }
-
 center {
   width: 120px;
 }
-
 #selector_2020-2040 {
 background: #fff;
 position: absolute;
@@ -78,9 +71,6 @@ width: 120px;
 border: 1px solid rgba(0,0,0,0.4);
 font-family: 'Open Sans', sans-serif;
 }
-
-
-
 #navigationBar {
   position: absolute;
   width: 250px;
@@ -89,8 +79,6 @@ font-family: 'Open Sans', sans-serif;
   background-color: grey;
   opacity:0.85;
 }
-
-
 /* Graph css code ///////////////////////////////////////////////// */
 #graph{
 padding: 10px;
@@ -98,32 +86,26 @@ position: relative;
 width: 700px;
 height: 350px;
 }
-
 /* Legend and slidebar css code ///////////////////////////////////////////////// */
 .legend {
   margin: 10px;
 }
-
 .sliderbar{
 margin: 10px;
 }
-
 .row {
   height: 20px;
   width: 100%;
 }
-
 .colors {
   background: linear-gradient(to right, 
 #dfdada, #bfff00, #ffff00, #ffbf00, #ff4000);
 }
-
 .label {
   width: 16%;
   display: inline-block;
   text-align: center;
 }
-
 .rectangle {
   height: 15px;
   width: 30px;
@@ -131,8 +113,6 @@ margin: 10px;
   display: inline-block;
   opacity:0.4;
 }
-
-
 #map {
 position: fixed;
 width:75%;
@@ -158,7 +138,6 @@ section:last-child {
 border-bottom: none;
 margin-bottom: 200px;
 }
-
 .legend {
     background-color: rgba(150,150,150,0.8);  
     border-radius: 3px;
@@ -182,7 +161,6 @@ margin-bottom: 200px;
     margin-right: 10px;
     width: 10px;
 }
-
  </style>
 
 
@@ -198,9 +176,8 @@ margin-bottom: 200px;
     <div><span style='background-color: #ff8000'></span>Carrington Relief Road</div>
     <div><span style='background-color: #00ff00'></span>Train Stations</div>
     <div><span style='background-color: #D8A500'></span>New Bailey Development</div>
-    <div><span style='background-color: #AD8F2C'></span>Stockport Interchange redevelopment</div>
+    <div><span style='background-color: #AD8F2C'></span>Stockport Interchange Redevelopment</div>
     </div>
-
 
 </div>
 
@@ -208,7 +185,7 @@ margin-bottom: 200px;
 <nav id = 'selector_2020-2040'></nav>
 
 <div id='navigationBar'>
-  <h1>MinoriCities - Future Interventions for Accessibility - Manchester Transport Strategy 2040 </h1>
+  <h2 href="https://downloads.ctfassets.net/nv7y93idf4jq/7FiejTsJ68eaa8wQw8MiWw/bc4f3a45f6685148eba2acb618c2424f/03._GM_2040_TS_Full.pdf">Greater Manchester Vision 2040</h2>
   <iframe width="250" height="407" src="https://www.youtube.com/embed/cl6fiVWFNTY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
   </iframe>
   <h2>Elements of the strategy:</h2>
@@ -218,15 +195,16 @@ margin-bottom: 200px;
     <p>4. Reliable – give customers confidence in journey times</p>
     <p>5. Safe and secure – reduce road accidents and deaths</p>
     <p>6. Well maintained and resilient – able to withstand unexpected events and weather conditions</p>
-    <embed src="https://downloads.ctfassets.net/nv7y93idf4jq/1W2LPpKzCQCswygYyukIwm/05c300a3d59a3147ad7a51c5b8c28188/2-17-0078-GM-2040-Full-Strategy-Document.pdf" width="250" height="375" 
- type="application/pdf">
+    <embed src="https://downloads.ctfassets.net/nv7y93idf4jq/1W2LPpKzCQCswygYyukIwm/05c300a3d59a3147ad7a51c5b8c28188/2-17-0078-GM-2040-Full-Strategy-Document.pdf" 
+           width="100%" height="300px" type="application/pdf" allowfullscreen="allowfullscreen">
+    
   </div>
 
 <div id='features'>
   <section id='Intro'  class='active'>
-      <h3>Greater Manchester Vision 2040 </h3>
+      <h3>Future Interventions for Accessibility - Manchester Transport Strategy 2040 </h3>
         <img src = 'https://images.ctfassets.net/nv7y93idf4jq/3tVZgGL6MwWcEIqm2qQ6EO/91a6f20885631efd8a42c5e849aa8938/Contact-Us-Large-Content-1.jpg' width="300">
-      <p>Our	vision	is	for	Greater	Manchester	to	have	‘World	class	connections	that	support	long-term,	
+      <p>‘World	class	connections	that	support	long-term,	
           sustainable	economic	growth	and <b>access</b>	to	opportunity	for	all’.	 Our	approach	to	achieving	this	was	
           set	out	in	the	‘Greater	Manchester	2040	Transport	Strategy:	Our	Vision’. </p>
       </section>
@@ -271,30 +249,361 @@ margin-bottom: 200px;
   Adapted from <a href='https://docs.mapbox.com/mapbox-gl-js/example/scroll-fly-to/'>MapBox</a>
   </small>
   </section>
-  </div>
+    </div>
 
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYm9nZHkiLCJhIjoiY2puMzl1Y2ljMjl2aDNrbzFtZzU2dzFsZyJ9.h5bdy1iAE_46JJHBl2sf-g';
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/bogdy/cjud22znv0dwl1gns8eoxjo3w',
+  center: [-2.50,  53.5000],
+  zoom: 9.5
+});
+map.on('load', function() { 
+// Another layer again shows the Ashton sation future development:
+map.addLayer({         
+  id: 'Ashton_Interchange',       
+  type: 'fill',         
+  source: {           
+  type: 'vector',           
+  url: 'mapbox://bogdy.8zrnzvq3'        
+  },         
+  'source-layer': 'Ashton_Interchange-1cm3x6',          
+  'layout': {},         
+  paint: {
+    'fill-color': '#4CAF50',
+    'fill-opacity': 0.4
+  }
+  });
+// Another layer again shows the Carrington future development:
+map.addLayer({         
+  id: 'Carrington',       
+  type: 'fill',         
+  source: {           
+  type: 'vector',           
+  url: 'mapbox://bogdy.awj7v110'        
+  },         
+  'source-layer': 'Carrington-8f1npt',          
+  'layout': {},         
+  paint: {
+    'fill-color': '#ff8000',
+//    'fill-line-width': 3,
+    'fill-opacity': 0.5
+  }
+  });
+// Another layer again shows the Metrolink future development:
+map.addLayer({         
+  id: 'Metrolink',       
+  type: 'line',         
+  source: {           
+  type: 'vector',           
+  url: 'mapbox://bogdy.bcr4bkkj'        
+  },         
+  'source-layer': 'Metrolink-b04itj',          
+  'layout': {},         
+  paint: {
+    'line-color': '#8000ff',
+    'line-opacity': 0.9
+  }
+  });
+    // Another layer again shows the Rail future development:
+    map.addLayer({         
+      id: 'Rail',       
+      type: 'line',         
+      source: {           
+      type: 'vector',           
+      url: 'mapbox://bogdy.airn0xeu'        
+      },         
+      'source-layer': 'Rail-a64udg',          
+      'layout': {},         
+      paint: {
+        'line-color': '#ff0000',
+        'line-width': .5,
+    
+        'line-opacity': 0.9
+      }
+      });
+// Another layer again shows the Ashton_Rail future development:
+map.addLayer({         
+  id: 'Ashton_Rail',       
+  type: 'line',         
+  source: {           
+  type: 'vector',           
+  url: 'mapbox://bogdy.5ccftljm'        
+  },         
+  'source-layer': 'Ashton_Rail-95a52d',          
+  'layout': {},         
+  paint: {
+    'line-color': '#a65959',
+    'line-width': 3,
+    'line-opacity': 0.9
+  }
+  });
+  // Another layer again shows the New_baley future development:
+map.addLayer({         
+  id: 'New_baley',       
+  type: 'fill',         
+  source: {           
+  type: 'vector',           
+  url: 'mapbox://bogdy.8140kx9w'        
+  },         
+  'source-layer': 'New_baley-cugb2j',          
+  'layout': {},         
+  paint: {
+    'fill-color': '#D8A500',
+    // 'fill-width': 2,
+    'fill-opacity': 0.6
+  }
+  });
+  // Another layer again shows the Train_stations future development:
+  map.addLayer({         
+    id: 'Train_station',       
+    type: 'circle',         
+    source: {           
+    type: 'vector',           
+    url: 'mapbox://bogdy.6350ohuc'        
+    },         
+    'source-layer': 'Train_stations-95b1bf',          
+    'layout': {},         
+    paint: {
+      'circle-color': '#00ff00',
+      'circle-radius': 3
+      // 'circle-opacity': 0.9
+    }
+    });
   
-
-
-<!--Legend -->
-
-<!--
-<div class='legend' id='sliderbar'>
-  <h2>(hours): <label id='tarrif'></label></h2>
-  <input id='slider' class='row' type='range' min='0' max='610' step='10' value='0' />
-</div>
-
-<div class="container">
-  <button id="interventions_2040">
-      Interventions
-  </button>
-</div>
-
-</div>
--->
-
-
-<script type = "text/javascript" src="script.js"></script>
+  // Another layer again shows the Stock_Port_Interchange future development:
+  map.addLayer({         
+    id: 'Stock_Port_Interchange',       
+    type: 'fill',         
+    source: {           
+    type: 'vector',           
+    url: 'mapbox://bogdy.ckeat7hz'        
+    },         
+    'source-layer': 'Stock_Port_Interchange-6nw78m',          
+    'layout': {},         
+    paint: {
+      'fill-color': '#00bfff',
+      // 'circle-radius': 3
+      'fill-opacity': 0.5
+    }
+    });
+      // Another layer again shows the Train_stations future development:
+  map.addLayer({         
+    id: 'Stock_Port_Town_Access',       
+    type: 'fill',         
+    source: {           
+    type: 'vector',           
+    url: 'mapbox://bogdy.3dtnnw13'        
+    },         
+    'source-layer': 'Stock_Port_Town_Access_Plan-bxyz39',          
+    'layout': {},         
+    paint: {
+      'fill-color': '#ff8000',
+      // 'circle-radius': 3
+      'fill-opacity': 0.5
+    }
+    });
+  
+// Popup features on click
+    map.on('click', 'Rail', function (e) {
+      new mapboxgl.Popup()
+      .setLngLat(e.lngLat)
+      .setHTML(e.features[0].properties.name)
+      .addTo(map);
+      });
+    map.on('mouseenter', 'Rail', function () {
+      map.getCanvas().style.cursor = 'pointer';
+      });
+    map.on('mouseleave', 'Rail', function () {
+      map.getCanvas().style.cursor = '';
+      mypopup.remove();
+      });
+      
+      map.on('click', 'Metrolink', function (e) {     
+        new mapboxgl.Popup(
+          // offset:[150,50],
+          // closeButton: true
+        )      
+        .setLngLat(e.lngLat)      
+        .setHTML(
+          // e.features[0].properties.Descritpti + 
+        // e.features[0].properties.Rational + 
+        e.features[0].properties.name)      
+        .addTo(map);    
+        });
+        map.on('mouseenter', 'Metrolink', function () {      
+          map.getCanvas().style.cursor = 'pointer';   
+          }); 
+          map.on('mouseleave', 'Metrolink', function () {    
+            map.getCanvas().style.cursor = '';    
+            mypopup.remove();
+            }); 
+      
+            
+            map.on('click', 'Carrington', function (e) {
+              new mapboxgl.Popup()
+              .setLngLat(e.lngLat)
+              .setHTML(
+                "<h3>" + e.features[0].properties.name 
+                + "</h3> " + e.features[0].properties.ration 
+                + "<br/> " + e.features[0].properties.Decript 
+                + "<br/> "+ "<img src = 'https://www.futurecarrington.com/wp-content/uploads/2016/02/Future-Carrington-Draft-Phase-One-Masterplan_LR-768x616.jpg' width=500>"
+                + "<br/> "+ "<iframe src='https://player.vimeo.com/video/301024280' frameborder=0 allowfullscreen=allowfullscreen id=fitvid573283 width=500></iframe>"
+                //  e.features[0].properties.Descritpti + "m<br />2010: " 
+              )
+              .addTo(map);
+              });
+            map.on('mouseenter', 'Carrington', function () {
+              map.getCanvas().style.cursor = 'pointer';
+              });
+            map.on('mouseleave', 'Carrington', function () {
+              map.getCanvas().style.cursor = '';
+              mypopup.remove();
+              });
+              map.on('click', 'Ashton_Interchange', function (e) {
+                new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(
+                  "<h3>" + e.features[0].properties.name 
+                  + "<br/> "+  "<embed src='https://assets.ctfassets.net/nv7y93idf4jq/33sLnXk4KIA8QY6IWcoAa4/8105cbc9c0c2aaf54d712d2d00a2879a/Tameside_Interchange_Consultation_Report.pdf' width=500 height=500 type='application/pdf'>"
+  
+                  //  e.features[0].properties.Descritpti + "m<br />2010: " 
+                  )
+                .addTo(map);
+                });
+              map.on('mouseenter', 'Ashton_Interchange', function () {
+                map.getCanvas().style.cursor = 'pointer';
+                });
+              map.on('mouseleave', 'Ashton_Interchange', function () {
+                map.getCanvas().style.cursor = '';
+                mypopup.remove();
+                });
+                map.on('click', 'New_baley', function (e) {
+                new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(
+                  "<h3>" + e.features[0].properties.name 
+                  + "<br/> "+  "<embed src='http://www.new-bailey.com/brochure/files/assets/common/downloads/New%20Bailey%20Brochure.pdf' width=500 height=500 type='application/pdf'>"
+  
+                  //  e.features[0].properties.Descritpti + "m<br />2010: " 
+                  )
+                  .addTo(map);
+                  });
+                map.on('mouseenter', 'New_baley', function () {
+                  map.getCanvas().style.cursor = 'pointer';
+                  });
+                map.on('mouseleave', 'New_baley', function () {
+                  map.getCanvas().style.cursor = '';
+                  mypopup.remove();
+                  });
+                  map.on('click', 'Stock_Port_Interchange', function (e) {
+                    new mapboxgl.Popup()
+                    .setLngLat(e.lngLat)
+                    .setHTML(
+                      "<h3>" + e.features[0].properties.name 
+                      + "<br/> "+  "<embed src='https://www.stockportchangehere.org/a-transport-renaissance-in-stockport' width=500 height=500>"
+      
+                      //  e.features[0].properties.Descritpti + "m<br />2010: " 
+       )
+                    .addTo(map);
+                    });
+                  map.on('mouseenter', 'Stock_Port_Interchange', function () {
+                    map.getCanvas().style.cursor = 'pointer';
+                    });
+                  map.on('mouseleave', 'Stock_Port_Interchange', function () {
+                    map.getCanvas().style.cursor = '';
+                    mypopup.remove();
+                    });
+document.getElementById('interventions_2040').addEventListener('click', function(){
+  map.flyTo(
+    intervention_area
+  )
+})
+});
+// Interventions 
+var interventions = {
+  'Intro': {
+    
+    center: [-2.53,  53.5000],
+    zoom: 9
+    },
+  'Rail': {
+    
+    center: [-2.23,  53.5000],
+    zoom: 10
+    },
+  'Ashton_Interchange': {
+  center: [ -2.097654, 53.489930],
+  zoom: 15.5,
+  pitch: 20
+  },
+  'Carrington': {
+  duration: 6000,
+  center: [ -2.397245, 53.426146],
+  zoom: 13,
+  pitch: 0
+  },
+  'Metrolink': {
+  center: [-2.23,  53.5000],
+  zoom: 10,
+  speed: 0.6,
+  pitch: 40
+  },
+  'Mill_Hill_Rail': {
+  
+  center: [ -2.171389, 53.550832],
+  zoom: 15,
+  pitch: 20,
+  speed: 0.5
+  },
+  'New_baley': {
+  center: [-2.255310, 53.482080],
+  zoom: 15
+  },
+  'Stock_Port_Interchange': {
+  center: [-2.163439, 53.408554],
+  zoom: 16,
+  pitch: 20
+  },
+  'Stock_Port_Town_Access': {
+    
+    center: [-2.161016, 53.411954],
+    zoom: 12,
+    pitch: 20
+    }
+  };
+ 
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+var chapterNames = Object.keys( interventions);
+for (var i = 0; i < chapterNames.length; i++) {
+var chapterName = chapterNames[i];
+if (isElementOnScreen(chapterName)) {
+setActiveChapter(chapterName);
+break;
+}}};
+ 
+var activeChapterName = 'Intro';
+function setActiveChapter(chapterName) {
+if (chapterName === activeChapterName) return;
+ 
+map.flyTo(interventions[chapterName]);
+ 
+document.getElementById(chapterName).setAttribute('class', 'active');
+document.getElementById(activeChapterName).setAttribute('class', '');
+ 
+activeChapterName = chapterName;
+}
+ 
+function isElementOnScreen(id) {
+var element = document.getElementById(id);
+var bounds = element.getBoundingClientRect();
+return bounds.top < window.innerHeight && bounds.bottom > 0;
+}; 
+    
+</script>
 
 </body>
 </html>
